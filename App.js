@@ -10,6 +10,7 @@ import AccountScreen from "./src/screens/AccountScreen";
 import TrackCreateScreen from "./src/screens/TrackCreateScreen";
 import TrackListScreen from "./src/screens/TrackListScreen";
 import TrackDetailScreen from "./src/screens/TrackDetailScreen";
+import { Provider as AuthProvider } from "./src/context/AuthContext";
 
 const switchNavigator = createSwitchNavigator({
   loginFlow: createStackNavigator({
@@ -26,13 +27,12 @@ const switchNavigator = createSwitchNavigator({
   })
 })
 
-export default createAppContainer(switchNavigator);
+const App = createAppContainer(switchNavigator);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default () => {
+  return (
+      <AuthProvider>
+        <App/>
+      </AuthProvider>
+  )
+}
