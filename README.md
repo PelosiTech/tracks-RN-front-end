@@ -11,7 +11,7 @@
 * [Technologies](#technologies)
 
 
-# Rubiks-App overview
+# Tracks-App overview
 The application is built off a handmade API backend using Express, Mongoose, and MongoDB, while the front end is maintained by react native and Context. Tracks-App is a basic application that can record your location as you start recording for your walks, runs, or bike rides. You can then pull up your Tracks that are saved to view past routes.
 
 # Demonstrations
